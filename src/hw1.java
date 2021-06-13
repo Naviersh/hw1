@@ -64,7 +64,7 @@ class Car
     }
 }
 
-public class Main
+class Main
 {
     public static void printing_cars(List<Car> cars)
     {
