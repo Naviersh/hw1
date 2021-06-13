@@ -48,11 +48,13 @@ class Main_hw2 {
         System.out.println(removeDuplicates(hs));
 
         HashMap <Integer,Integer> test = new HashMap<>();
-        test.put(228, 1337);
+        test.put(111, 1337);
         test.put(322, 213);
         test.put(333, 1337);
         System.out.println("Задание 2");
+        System.out.println("Было");
         System.out.println(test);
+        System.out.println("Стало");
         System.out.println(reverse_map(test));
 
         String[] input = new String[]{
