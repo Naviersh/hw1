@@ -1,3 +1,4 @@
+import java.security.Key;
 import java.util.*;
 
 class Main_hw2 {
@@ -23,14 +24,21 @@ class Main_hw2 {
                 "Petr 8", "Ivan 6", "Alex 5",
                 "Ivan 1", "Petr 5", "Alex 1"
         };
+        HashMap<String, Integer> hm = new HashMap<>();
         int best_score = 0;
         String name_winer = "123";
         for (int i=0; i<input.length;i++){
             String[] new_mas = mas[i].split(" ");
             String name = new_mas[0];
             Integer score = Integer.parseInt(new_mas[1]);
-            if (best_score<score){
-                best_score = score;
+            Integer old_score = hm.get(name);
+            if(old_score==null){
+                old_score = 0 ;
+            }
+            Integer total_score = old_score+score;
+            hm.put(name,total_score);
+            if (best_score<total_score){
+                best_score = total_score;
                 name_winer = name;
             }
         }
